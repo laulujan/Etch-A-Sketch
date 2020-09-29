@@ -4,12 +4,12 @@ function makeGrid(rows, cols) {
   container.style.setProperty("--grid-rows", rows);
   container.style.setProperty("--grid-cols", cols);
   for (let cells = 0; cells < rows * cols; cells++) {
-    let cell = document.createElement("div");
+    const cell = document.createElement("div");
     container.appendChild(cell).className = "cell";
-    let elements = document.querySelectorAll('.cell');
+    const elements = document.querySelectorAll('.cell');
     elements.forEach(function(element){
       element.addEventListener('mouseover', function(event){
-        event.target.classList.add('draw')
+        event.target.style.background = randomColor();
       })
     } )
 
@@ -17,3 +17,9 @@ function makeGrid(rows, cols) {
 }
 
 makeGrid(16, 16);
+
+function randomColor()
+{
+    let randomCode = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomCode;
+}
