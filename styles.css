@@ -1,18 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
-  }
+}
+
+body {
+    background-image: url('https://i.ibb.co/51Ksmkh/Blue-and-Gray-Polka-Dots-Quote-Creative-Desktop-Wallpaper-1.png');
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+	background:  linear-gradient(to bottom, #d85cab 0%, #8d75b6 50%, #7ec5ee 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 54px;
+    margin: 5px;
+}
 .container{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     margin: auto;
-    border: 1px solid black;
+    border: 5px solid rgba(238, 238, 238, 0.788);
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+     grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr); 
 }
 
 .cell {
-    border: 1px solid #ddd;
+    border: 1px solid rgba(238, 238, 238, 0.788);
     text-align: center;
+    background-color: white;
+}
+
+button {
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: white;
+    color: #8d75b6;
+    border-radius: 20px;
+    border-style: none;
+    border: 3px solid #8d75b6;
+    margin-bottom: 20px;
+    width: 80px;
+    outline: none;
+}
+button:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 2px 2px 2px #acabab
 }
